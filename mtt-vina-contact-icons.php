@@ -2,7 +2,7 @@
 /**
  * Plugin Name: MTT VINA Contact Icons
  * Description: Hien thi icon lien he va Google Maps cho MTT VINA.
- * Version: 1.3.1
+ * Version: 1.4.0
  * Requires at least: 5.0
  * Requires PHP: 7.2
  * Author: MTT VINA
@@ -10,8 +10,9 @@
  * Update URI: https://github.com/cuongasd/mtt-vina-contact-icons
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
-define( 'MTT_VINA_CONTACT_ICONS_VERSION', '1.3.1' );
+define( 'MTT_VINA_CONTACT_ICONS_VERSION', '1.4.0' );
 // Anniversary cover test retired: render the original WordPress hero unchanged.
+require_once __DIR__ . '/assets/home-about.php';
 function mtt_vina_contact_icons_enqueue() {
     if ( is_admin() ) { return; }
     $base = plugin_dir_url( __FILE__ );

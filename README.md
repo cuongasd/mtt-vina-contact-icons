@@ -1,4 +1,4 @@
-# MTT VINA Contact Icons 1.3.1
+# MTT VINA Contact Icons 1.4.0
 
 Bản 1.2.0 thêm nút Google Maps tròn 52px phía trên Zalo, mở https://maps.app.goo.gl/DEL3w4oQjD171L8f9 trong tab mới. Giữ nguyên vị trí cụm liên hệ, màu và liên kết của hai nút cũ. Chỉ thêm bản đồ khi có cụm liên hệ phù hợp; không tạo nút trùng.
 
@@ -47,3 +47,14 @@ Nút MORE INFO nằm trong GIF là nội dung ảnh; không tự thêm đường
 ## Hoàn tác cover 1.3.1
 Ngừng nạp module cover test, kể cả khi tùy chọn cũ đã bật. WordPress hiển thị nguyên slider từ UX Builder. Không sửa cơ sở dữ liệu, không thay đổi icon liên hệ. Phần mô tả 1.3.0 phía trên chỉ là lịch sử. Chờ tự cập nhật và cache hết hạn để thấy bản cũ.
 
+
+## Giới thiệu test 1.4.0
+Thay riêng khối Giới thiệu đã xác minh trên trang chủ bằng bố cục được duyệt: nội dung trái, ảnh nhà xưởng hiện tại bên phải, bốn thế mạnh và hiệu ứng khi cuộn. Giữ nguyên đoạn văn, ảnh/srcset, URL nút CTA và ID section. Không đổi canonical, metadata, URL trang, cover hoặc icon. Không có bộ đếm số. Hỗ trợ reduced-motion và hiển thị đầy đủ nếu JavaScript không chạy.
+
+Mặc định bật khi cập nhật. Vào **Cài đặt → MTT Giới thiệu trang chủ**, bỏ chọn **Bật thiết kế Giới thiệu mới trên trang chủ**, lưu và xóa cache trang chủ để quay về khối ban đầu. Công tắc đã tắt được giữ nguyên qua các lần cập nhật. Không cần vô hiệu hóa toàn plugin.
+
+Khối gốc giữ nguyên trong cơ sở dữ liệu UX Builder: plugin chỉ thay kết quả render của đúng shortcode section trên trang chủ. Nếu nội dung, ảnh hoặc cấu trúc khối nguồn không còn khớp bản đã xác minh, plugin giữ nguyên khối đó thay vì ghi đè thay đổi mới. Muốn sửa nội dung trong UX Builder: tắt công tắc trước.
+
+Nếu cần hoàn tác qua GitHub mà không vào WordPress, phát hành phiên bản cao hơn ngừng nạp module `assets/home-about.php`; không sửa release đã phát hành. Bản HTML công khai dùng kiểm thử nằm tại `tests/fixtures/home-about-original.html`, không thay thế backup cơ sở dữ liệu.
+
+Kiểm thử bổ sung: `php tests/home-about.php`, `node tests/home-about.cjs`.
