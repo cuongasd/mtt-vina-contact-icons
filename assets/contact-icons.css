@@ -1,0 +1,19 @@
+.float-contact button.mtt-contact-icon {
+    width: 52px !important; min-width: 52px !important;
+    height: 52px !important; min-height: 52px !important;
+    padding: 0 !important; border: 0 !important; border-radius: 50% !important;
+}
+.float-contact button.mtt-contact-icon > a {
+    display: flex !important; align-items: center; justify-content: center;
+    width: 100%; height: 100%; padding: 0 !important;
+    border-radius: inherit; font-size: 0 !important; line-height: 1 !important;
+}
+.float-contact button.mtt-contact-icon > a::before,
+.float-contact button.mtt-contact-icon > a::after { content: none !important; }
+.float-contact .mtt-contact-glyph {
+    display: block; width: 34px; height: 34px;
+    background-position: center; background-size: contain; background-repeat: no-repeat;
+}
+.float-contact .chat-zalo.mtt-contact-icon .mtt-contact-glyph { background-image: url('zalo.svg'); }
+.float-contact .hotline.mtt-contact-icon .mtt-contact-glyph { background-image: url('phone.svg'); }
+.float-contact button.mtt-contact-icon > a:focus-visible { outline: 3px solid #0f7cb6; outline-offset: 3px; }
