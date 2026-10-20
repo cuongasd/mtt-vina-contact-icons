@@ -1,4 +1,4 @@
-# MTT VINA Contact Icons 1.4.0
+# MTT VINA Contact Icons 1.4.1
 
 Bản 1.2.0 thêm nút Google Maps tròn 52px phía trên Zalo, mở https://maps.app.goo.gl/DEL3w4oQjD171L8f9 trong tab mới. Giữ nguyên vị trí cụm liên hệ, màu và liên kết của hai nút cũ. Chỉ thêm bản đồ khi có cụm liên hệ phù hợp; không tạo nút trùng.
 
@@ -58,3 +58,6 @@ Khối gốc giữ nguyên trong cơ sở dữ liệu UX Builder: plugin chỉ t
 Nếu cần hoàn tác qua GitHub mà không vào WordPress, phát hành phiên bản cao hơn ngừng nạp module `assets/home-about.php`; không sửa release đã phát hành. Bản HTML công khai dùng kiểm thử nằm tại `tests/fixtures/home-about-original.html`, không thay thế backup cơ sở dữ liệu.
 
 Kiểm thử bổ sung: `php tests/home-about.php`, `node tests/home-about.cjs`.
+
+## Hoàn tác Giới thiệu 1.4.1
+Ngừng nạp module Giới thiệu test, kể cả khi tùy chọn đã bật. Khối ban đầu được hiển thị nguyên từ UX Builder; không thay đổi cơ sở dữ liệu, cover hoặc icon liên hệ. Trang cấu hình test cũng ngừng nạp. Mô tả 1.4.0 phía trên chỉ là lịch sử. WordPress cần nhận bản cập nhật và cache được làm mới để thấy kết quả.
