@@ -2,7 +2,7 @@
 /**
  * Plugin Name: MTT VINA Contact Icons
  * Description: Hien thi icon cho hai nut lien he hien co, giu nguyen duong dan.
- * Version: 1.1.0
+ * Version: 1.1.1
  * Requires at least: 5.0
  * Requires PHP: 7.2
  * Author: MTT VINA
@@ -10,7 +10,7 @@
  * Update URI: https://github.com/cuongasd/mtt-vina-contact-icons
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
-define( 'MTT_VINA_CONTACT_ICONS_VERSION', '1.1.0' );
+define( 'MTT_VINA_CONTACT_ICONS_VERSION', '1.1.1' );
 function mtt_vina_contact_icons_enqueue() {
     if ( is_admin() ) { return; }
     $base = plugin_dir_url( __FILE__ );
@@ -38,3 +38,4 @@ function mtt_vina_contact_icons_release_only( $strategies ) {
     return isset( $strategies['latest_release'] ) ? array( 'latest_release' => $strategies['latest_release'] ) : array();
 }
 add_action( 'plugins_loaded', 'mtt_vina_contact_icons_init_updater' );
+

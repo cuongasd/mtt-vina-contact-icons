@@ -29,3 +29,8 @@ Không sửa nội dung hoặc ZIP của Release đã phát hành; luôn tăng p
 Giữ ZIP 1.0.0 và bản tốt gần nhất ngoài repo. Nếu lỗi, tắt tự cập nhật riêng plugin rồi cài lại ZIP bản tốt qua WordPress; làm mới cache.
 Nếu cần tự cập nhật bản sửa, phát hành nội dung bản tốt với số phiên bản cao hơn.
 GitHub lỗi mạng không đổi code đang cài; updater sẽ thử lại theo lịch.
+
+## Xác minh bản 1.1.1
+Bản này chỉ cập nhật tài liệu và số phiên bản để kiểm tra đường GitHub → WordPress.
+Icon, màu, vị trí và đường dẫn giữ nguyên. Tự cập nhật diễn ra theo lịch WordPress;
+việc đã bật tùy chọn tự cập nhật không chứng minh một lần tự cài đã hoàn tất.
