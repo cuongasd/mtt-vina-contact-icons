@@ -1,4 +1,6 @@
-# MTT VINA Contact Icons 1.0.0
+# MTT VINA Contact Icons 1.2.0
+
+Bản 1.2.0 thêm nút Google Maps tròn 52px phía trên Zalo, mở https://maps.app.goo.gl/DEL3w4oQjD171L8f9 trong tab mới. Giữ nguyên vị trí cụm liên hệ, màu và liên kết của hai nút cũ. Chỉ thêm bản đồ khi có cụm liên hệ phù hợp; không tạo nút trùng.
 
 Cài đặt: Plugin → Cài mới → Tải plugin lên → chọn mtt-vina-contact-icons-1.0.0.zip → Cài đặt → Kích hoạt.
 

@@ -17,3 +17,14 @@
 .float-contact .chat-zalo.mtt-contact-icon .mtt-contact-glyph { background-image: url('zalo.svg'); }
 .float-contact .hotline.mtt-contact-icon .mtt-contact-glyph { background-image: url('phone.svg'); }
 .float-contact button.mtt-contact-icon > a:focus-visible { outline: 3px solid #0f7cb6; outline-offset: 3px; }
+.float-contact > a.mtt-contact-map {
+    display: flex !important; align-items: center; justify-content: center;
+    width: 52px !important; height: 52px !important;
+    padding: 0 !important; margin: 0 0 6px !important;
+    border: 0 !important; border-radius: 50% !important;
+    background: #4285f4 !important; text-decoration: none !important;
+}
+.float-contact > a.mtt-contact-map::before,
+.float-contact > a.mtt-contact-map::after { content: none !important; }
+.float-contact .mtt-contact-map .mtt-contact-glyph { background-image: url('map.svg'); }
+.float-contact > a.mtt-contact-map:focus-visible { outline: 3px solid #0f7cb6; outline-offset: 3px; }
