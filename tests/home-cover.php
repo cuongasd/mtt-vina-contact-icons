@@ -1,31 +1,15 @@
 <?php
+// Boot the released plugin with a previously enabled cover option.
 define( 'ABSPATH', __DIR__ );
-$state = array( 'admin' => false, 'front' => true, 'main' => true, 'loop' => true, 'enabled' => true );
-function add_action() {}
-function add_filter() {}
-function is_admin() { global $state; return $state['admin']; }
-function is_front_page() { global $state; return $state['front']; }
-function is_main_query() { global $state; return $state['main']; }
-function in_the_loop() { global $state; return $state['loop']; }
-function get_option( $key, $default ) { global $state; return $state['enabled']; }
-function plugin_dir_url( $file ) { return 'https://example.org/plugin/assets/'; }
-function esc_url( $value ) { return $value; }
-require __DIR__ . '/../assets/home-cover.php';
-function verify( $condition, $message ) {
-    if ( ! $condition ) { fwrite( STDERR, $message . "\n" ); exit( 1 ); }
+$hooks = array();
+function add_action( $hook, $callback ) { global $hooks; $hooks[] = $hook; }
+function add_filter( $hook, $callback ) { global $hooks; $hooks[] = $hook; }
+function get_option( $key, $default = false ) { return true; }
+require __DIR__ . '/../mtt-vina-contact-icons.php';
+if ( in_array( 'pre_do_shortcode_tag', $hooks, true ) || in_array( 'admin_menu', $hooks, true ) || function_exists( 'mtt_vina_home_cover_shortcode' ) ) {
+    fwrite( STDERR, "Cover override must not load even with saved enabled option\n" ); exit( 1 );
 }
-$match = array( 5 => 'GIẢI PHÁP CƠ KHÍ &amp; THIẾT BỊ NHÀ MÁY ĐỒ GÁ JIG' );
-function render_cover( $match ) { return mtt_vina_home_cover_shortcode( false, 'ux_slider', array(), $match ); }
-$original = $match;
-verify( false !== strpos( render_cover( $match ), 'home-cover-6-years.gif' ), 'Hero must render GIF' );
-verify( $match === $original, 'Source must remain unchanged' );
-verify( false === render_cover( array( 5 => 'Products' ) ), 'Other sliders must remain unchanged' );
-verify( 'existing' === mtt_vina_home_cover_shortcode( 'existing', 'ux_slider', array(), $match ), 'Respect prior filter' );
-foreach ( array( 'front', 'main', 'loop', 'enabled' ) as $key ) {
-    $state[$key] = false;
-    verify( false === render_cover( $match ), 'Must preserve original when ' . $key . ' is disabled' );
-    $state[$key] = true;
+if ( ! in_array( 'wp_enqueue_scripts', $hooks, true ) || ! in_array( 'plugins_loaded', $hooks, true ) ) {
+    fwrite( STDERR, "Contact icons and updater must remain registered\n" ); exit( 1 );
 }
-$state['admin'] = true;
-verify( false === render_cover( $match ), 'Editor must retain original slider' );
-echo "PASS: hero replacement, rollback, original data, other sliders, admin and page scope\n";
+echo "PASS: original cover restored, stale option ignored, icons and updater preserved\n";

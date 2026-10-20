@@ -1,10 +1,10 @@
-# MTT VINA Contact Icons 1.3.0
+# MTT VINA Contact Icons 1.3.1
 
 Bản 1.2.0 thêm nút Google Maps tròn 52px phía trên Zalo, mở https://maps.app.goo.gl/DEL3w4oQjD171L8f9 trong tab mới. Giữ nguyên vị trí cụm liên hệ, màu và liên kết của hai nút cũ. Chỉ thêm bản đồ khi có cụm liên hệ phù hợp; không tạo nút trùng.
 
 Cài đặt: Plugin → Cài mới → Tải plugin lên → chọn mtt-vina-contact-icons-1.0.0.zip → Cài đặt → Kích hoạt.
 
-Plugin đổi hai nút liên hệ hiện có thành icon tròn 52px, giữ màu, vị trí và đường dẫn gốc. Không thêm nút nếu website không có cấu trúc phù hợp. Có trang Cài đặt → MTT Cover trang chủ để bật/tắt cover test.
+Plugin đổi hai nút liên hệ hiện có thành icon tròn 52px, giữ màu, vị trí và đường dẫn gốc. Không thêm nút nếu website không có cấu trúc phù hợp. Bản 1.3.1 đã gỡ chế độ test cover GIF và trang cấu hình của nó.
 
 Hoàn tác: Vô hiệu hóa plugin, làm mới cache website nếu có và tải lại trang.
 
@@ -43,3 +43,7 @@ Không sửa nội dung trong cơ sở dữ liệu: slider và liên kết cũ v
 Mặc định bật khi cập nhật 1.3.0. Nếu không đăng nhập WordPress, phát hành bản mới đặt `MTT_VINA_HOME_COVER_DEFAULT` thành false (khi chưa lưu tùy chọn); nếu đã lưu tùy chọn, bản hoàn tác cần cho hàm enabled trả về false. Không sửa release cũ. Vô hiệu hóa toàn plugin cũng khôi phục slider nhưng đồng thời tắt tùy chỉnh icon.
 Chỉ khớp shortcode ux_slider chứa cả hai tiêu đề hero đã xác minh trên trang công khai. Nếu cấu trúc nguồn khác, giữ nguyên cover cũ thay vì thay nhầm nội dung.
 Nút MORE INFO nằm trong GIF là nội dung ảnh; không tự thêm đường dẫn chưa được chỉ định.
+
+## Hoàn tác cover 1.3.1
+Ngừng nạp module cover test, kể cả khi tùy chọn cũ đã bật. WordPress hiển thị nguyên slider từ UX Builder. Không sửa cơ sở dữ liệu, không thay đổi icon liên hệ. Phần mô tả 1.3.0 phía trên chỉ là lịch sử. Chờ tự cập nhật và cache hết hạn để thấy bản cũ.
+
